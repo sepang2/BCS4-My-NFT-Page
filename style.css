@@ -3,12 +3,29 @@
   src: url("./assets/fonts/DS-DIGI.TTF");
 }
 
+@font-face {
+  font-family: "DOSPilgiMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/DOSPilgiMedium.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .font-digi {
   font-family: "DS-DIGI";
 }
 
+.font-DOS {
+  font-family: "DOSPilgiMedium";
+}
+
 body {
   margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
 }
 
 video {
@@ -33,4 +50,35 @@ header {
   justify-content: space-between;
   padding: 16px;
   font-size: 32px;
+}
+
+.quotes {
+  font-size: 32px;
+}
+
+.new-quotes {
+  display: none;
+}
+
+.new-quotes > button {
+  background-color: pink;
+  padding: 8px 16px;
+  margin-left: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.new-quotes > button:hover {
+  background-color: hotpink;
+}
+
+.new-quotes-input {
+  border: 1px solid violet;
+  padding: 4px 8px;
+  border-radius: 99999px;
+  font-size: 20px;
+}
+
+.new-quotes-input:focus {
+  outline: 2px solid pink;
 }
