@@ -1,7 +1,5 @@
 const clock = document.querySelector(".clock");
 
-let seconds = 11;
-
 function getTime() {
   const date = new Date();
 
