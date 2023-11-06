@@ -2,6 +2,9 @@ const clock = document.querySelector(".clock");
 const quotes = document.querySelector(".quotes");
 const newQuotes = document.querySelector(".new-quotes");
 const newQuotesInput = document.querySelector(".new-quotes-input");
+const nftImg = document.querySelector(".nft-img");
+const nftName = document.querySelector(".nft-name");
+const nftDesc = document.querySelector(".nft-desc");
 
 function getTime() {
   const date = new Date();
@@ -62,3 +65,15 @@ function onClickQuotes() {
   quotes.style.display = "none";
   newQuotes.style.display = "block";
 }
+
+async function getNft() {
+  const response = await axios.get(
+    "https://olbm.mypinata.cloud/ipfs/QmY6S4XofhpHVujy24pdpYvXppCN1CRWfWeLQZFsTG7CQt"
+  );
+
+  nftImg.src = response.data.image;
+  nftName.innerText = response.data.name;
+  nftDesc.innerText = response.data.description;
+}
+
+getNft();
